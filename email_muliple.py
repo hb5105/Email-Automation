@@ -28,6 +28,7 @@ def send_email(aa):
     msg['From']=sender_address
     msg['To']=aa
     recipients=aa
+    #in an alternate soln if you specify the recepients array in the sendemail fn call it will send it to everyone in thst list.
     server.sendmail(sender_address,recipients,msg.as_string())
 
 print("Please enter the comma seperated list of mail ids of the recepients")
