@@ -6,13 +6,17 @@ print("Welcome to mass mail sender")
 print('Kindly Note, in case of a gmail account you need to allow login to less known apps in your google account security settings')
 print("Kindly enter your email id")
 sender_address=input().strip()
+
+#password uses the getpass library
 print("Note: Your password information is encrypted")
 password=getpass.getpass()
+
 print("enter the subject")
 subject=input().strip()
 print("enter the message, ie mail contents")
 msg1=input().strip()
 #server initialization
+#here this value will need to be edited incase your email account is this another service provider.
 server=smtplib.SMTP('smtp.gmail.com',587)
 server.starttls()
 server.login(sender_address, password)
